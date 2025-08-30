@@ -1,0 +1,45 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "clang-debug-config",
+            "description": "Debug config with clang compiler",
+            "inherits": "default-debug-config",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_CXX_FLAGS_DEBUG": "-g -O0 -Wall -Werror -Wextra -pedantic"
+            }
+        },
+        {
+            "name": "clang-release-config",
+            "description": "Release config with clang compiler",
+            "inherits": "default-release-config",
+            "cacheVariables": {
+                "CMAKE_CXX_COMPILER": "clang++",
+                "CMAKE_CXX_FLAGS_DEBUG": "-O2 -DNDEBUG"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "clang-debug-build",
+            "description": "Debug build with clang config",
+            "inherits": "default-debug-build",
+            "configurePreset": "clang-debug-config"
+        },
+        {
+            "name": "clang-release-build",
+            "description": "Release build with clang config",
+            "inherits": "default-release-build",
+            "configurePreset": "clang-release-config"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "clang-test",
+            "description": "Test preset with clang config",
+            "inherits": "default-test",
+            "configurePreset": "clang-debug-config"
+        }
+    ]
+}

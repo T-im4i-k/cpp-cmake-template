@@ -1,0 +1,60 @@
+{
+    "version": 3,
+    "configurePresets": [
+        {
+            "name": "default-debug-config",
+            "description": "Debug config with default compiler",
+            "generator": "Ninja",
+            "binaryDir": "build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": true
+            }
+        },
+        {
+            "name": "default-release-config",
+            "description": "Release config with default compiler",
+            "generator": "Ninja",
+            "binaryDir": "build/${presetName}",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release",
+                "CMAKE_EXPORT_COMPILE_COMMANDS": true
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "default-debug-build",
+            "description": "Debug build with default config",
+            "configurePreset": "default-debug-config",
+            "targets": [
+                "all"
+            ],
+            "jobs": 8
+        },
+        {
+            "name": "default-release-build",
+            "description": "Release build with default config",
+            "configurePreset": "default-release-config",
+            "targets": [
+                "cpp_cmake_template"
+            ],
+            "cleanFirst": true,
+            "jobs": 8
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "default-test",
+            "description": "Test preset with default config",
+            "configurePreset": "default-debug-config",
+            "output": {
+                "outputOnFailure": true
+            },
+            "execution": {
+                "stopOnFailure": true,
+                "jobs": 8
+            }
+        }
+    ]
+}
