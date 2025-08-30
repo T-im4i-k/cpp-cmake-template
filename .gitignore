@@ -1,0 +1,62 @@
+###########################
+# IDE and Editor Settings #
+###########################
+
+# VSCode files
+.vscode/
+*.code-workspace
+
+# JetBrains files
+.idea/
+cmake-build-*/
+
+###############################
+# Build Files and Directories #
+###############################
+
+# Build directories
+build/
+bin/
+obj/
+out/
+
+# Compiler Object files
+*.obj
+*.o
+*.so
+*.a
+*.slo
+*.lo
+*.la
+*.dll
+*.dylib
+*.exe
+*.out
+
+#####################
+# Os-specific Files #
+#####################
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+#######################
+# User-specific Files #
+#######################
+
+# CMake user presets
+CMakeUserPresets.json
+
+# Temporary or backup files
+*~
+*.swp
+*.tmp
+*.bak
+*.log
+
+# Python virtual environment
+.venv/
