@@ -1,0 +1,1 @@
+add_executable(cpp_cmake_template main.cpp)
