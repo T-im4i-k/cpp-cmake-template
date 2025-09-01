@@ -1,0 +1,4 @@
+add_executable(test_hello_lib test_hello_lib.cpp)
+target_link_libraries(test_hello_lib PRIVATE hello_lib)
+
+add_test(NAME test_hello_lib COMMAND test_hello_lib)
