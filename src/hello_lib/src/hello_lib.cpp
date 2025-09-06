@@ -1,6 +1,6 @@
-#include <iostream>
-
 #include "hello_lib/hello_lib.hpp"
+
+#include <iostream>
 
 namespace HelloLib {
     auto printHello(std::ostream &os) -> std::ostream & {
