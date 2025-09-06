@@ -4,7 +4,7 @@
 
 #include "hello_lib/hello_lib.hpp"
 
-int main() {
+auto main() -> int {
     // Test printHello() function
     {
         std::ostringstream os;

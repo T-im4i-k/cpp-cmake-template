@@ -3,5 +3,5 @@
 #include <iostream>
 
 namespace HelloLib {
-    std::ostream &printHello(std::ostream &os);
+    auto printHello(std::ostream &os) -> std::ostream &;
 } // namespace HelloLib
