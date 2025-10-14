@@ -57,6 +57,3 @@ CMakeUserPresets.json
 *.tmp
 *.bak
 *.log
-
-# Python virtual environment
-.venv/
